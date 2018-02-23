@@ -1,2 +1,14 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<% provide(:title, "Project Manager") %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %></title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <p>
+      Criado por Lucas Tavares como parte do processo seletivo para a Inventos digitais.
+    </p>
+  </body>
+</html>
