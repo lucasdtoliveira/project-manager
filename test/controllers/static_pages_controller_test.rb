@@ -26,18 +26,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get contact" do
-<<<<<<< HEAD
-    get static_pages_contact_url
-    assert_response :success
-    assert_select "title", "#{@base_title}"
-  end
-  
-=======
     get contact_path
     assert_response :success
     assert_select "title", "#{@base_title}"
   end
-
->>>>>>> login-page
 
 end
