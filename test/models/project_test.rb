@@ -4,7 +4,6 @@ class ProjectTest < ActiveSupport::TestCase
   def setup
     @user = users(:michael)
     @project = @user.projects.build(content: "Lorem ipsum", titulo: "First Project")
-    #@project = Project.new(content: "Lorem ipsum", titulo: "First Project", user_id: @user.id)
   end
 
   test "should be valid" do
@@ -19,6 +18,11 @@ class ProjectTest < ActiveSupport::TestCase
 
   test "content should be present" do
     @project.content = "   "
+    assert_not @project.valid?
+  end
+
+  test "content should be at most 800 characters" do
+    @project.content = "a" * 801
     assert_not @project.valid?
   end
 
