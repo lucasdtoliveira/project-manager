@@ -1,4 +1,16 @@
 
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="project_form">
+        <%= render 'shared/project_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
 <div class="center jumbotron">
   <h1>Welcome to the Project Manager</h1>
 
@@ -10,4 +22,4 @@
 
   <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
-
+<% end %>

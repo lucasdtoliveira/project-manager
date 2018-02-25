@@ -14,6 +14,9 @@ gem 'devise'
 gem 'formtastic', '~> 3.0'
 gem "slim-rails"
 gem "slack-notifier"
+gem 'will_paginate',           '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'faker'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

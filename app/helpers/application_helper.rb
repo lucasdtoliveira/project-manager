@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   # Returns the full title on a per-page basis.
-  def title(page_title = '')
+  def full_title(page_title = '')
     base_title = "Project Manager"
     if page_title.empty?
       base_title
