@@ -14,8 +14,14 @@
       ol.projects
         = render @projects
       = will_paginate @projects
-
-
+/  .col-md-16
+  - if @project.bugs.any?
+    h3
+      | Bugs (
+      = @project.bugs.count
+      |  )
+    ol.bugs
+      = render @bugs /!
 
 
 

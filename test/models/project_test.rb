@@ -40,5 +40,13 @@ class ProjectTest < ActiveSupport::TestCase
     assert_equal projects(:most_recent), Project.first
   end
 
+  test "associated bugs should be destroyed" do
+    @project.save
+    @project.bugs.create!(content: "Lorem ipsum", estado: "Lorem estado")
+    assert_difference 'Bug.count', -1 do
+      @project.destroy
+    end
+  end
+
 end
 

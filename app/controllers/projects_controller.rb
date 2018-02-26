@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
 
   def create
      @project = current_user.projects.build(project_params)
+     @bugs = @project.bugs.paginate(page: params[:page])
     if @project.save
       flash[:success] = "Project created!"
       redirect_to root_url

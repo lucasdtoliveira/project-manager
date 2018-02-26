@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  estado: MyText
+  created_at: <%= 10.minutes.ago %>
+  project: one
+
+two:
+  content: MyText
+  estado: MyText
+  created_at: <%= 20.minutes.ago %>
+  project: orange
+
+cat_video:
+  content: MyText
+  estado: MyText
+  created_at: <%= 3.years.ago %>
+  project: orange
+
+orange:
+  content: MyText
+  estado: MyText
+  created_at: <%= 3.years.ago %>
+  project: orange
+
+tau_manifesto:
+  content: MyText
+  estado: MyText
+  created_at: <%= 3.years.ago %>
+  project: orange
+
+most_recent:
+  content: MyText
+  estado: MyText
+  created_at: <%= Time.zone.now %>
+  project: orange
+
+<% 30.times do |n| %>
+bug_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  estado: "Em aberto teste"
+  created_at: <%= 42.days.ago %>
+  project: orange
+<% end %>

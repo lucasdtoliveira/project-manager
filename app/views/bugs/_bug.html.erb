@@ -1,0 +1,8 @@
+<li id="bug-<%= bug.id %>">
+  <span class="project"><%= bug.project.titulo %></span>
+  <span class="content"><%= bug.content %></span>
+  <span class="estado"><%= bug.estado %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+</li>
